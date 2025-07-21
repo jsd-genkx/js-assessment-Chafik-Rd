@@ -31,10 +31,11 @@ class Field {
 		clear();
 
 		// Replace with your own code //
-		console.log(this.field); // Please REMOVE this line before you start your code!
+		// console.log(this.field); // Please REMOVE this line before you start your code!
+		this.field.forEach( (item) => console.log(item.join("")))
 
 		if(this.warning)console.log(this.warningMessage);
-		if(this.warningOutside)console.log(`⚠️Don't move:${this.warningMessageOutside}!`);
+		if(this.warningOutside)console.log(`⚠️  Don't move:${this.warningMessageOutside}!`);
 	}
 
 	// Your Code //
@@ -117,7 +118,7 @@ class Field {
 				break;
 			default:
 				this.warning = true;
-				this.warningMessage = "Invalid input! Please enter only u, d, l, or r.";
+				this.warningMessage = "⚠️  Invalid input! Please enter only u, d, l, or r.";
 		}
 		this.checkWarningOutside()
 		return this.gameOver;
@@ -125,41 +126,28 @@ class Field {
 	}
 }
 const randomField = () => {
-	const rows = Math.floor(Math.random() * (7))+ 4;
-	const cols = Math.floor(Math.random() * 4)+ 3;
+	const rows = Math.floor(Math.random() * (8))+ 4;
+	const cols = Math.floor(Math.random() * 5)+ 3;
 	const field = [];
-	const fieldSymbols = [hole, fieldCharacter, hat, pathCharacter];
+	const fieldSymbols = [hole, fieldCharacter, hat];
 	let countSymbols = {};
 	let addHat = true;
 
 	fieldSymbols.map(key => {countSymbols[key]=0})
 
-	// for (let i=0; i < rows; i++){
-	// 	const arr = []
-	// 	for (let j=0; j < cols; j++){
-	// 		let random = Math.floor(Math.random() * 3);
-	// 		if(i===0 && j===0){
-	// 			random =
-	// 		}
-			
-
-	// 	}
-	// }
-	for (let i = 0;	 i < rows; i++) {
+	for (let i=0; i < rows; i++){
 		const arr = []
-		for (let j = 0;j < cols; j++) {
+		for (let j=0; j < cols; j++){
 			let random = Math.floor(Math.random() * 3);
-
-			if (i === 0 && j === 0) {
+			if(i===0 && j===0){
 				arr.push(pathCharacter);
-			}else if (random === 2 && addHat && ((i < rows/2 && j > cols/2) || i > rows/2)){
-				arr.push(fieldSymbols[random]);
+			}else if(addHat && i === rows && j === cols){
+				arr.push(fieldSymbols[2]);
+			}else if(addHat && random === 2 && (i > rows/2 || j > cols/2)){
+				arr.push(fieldSymbols[2]);
 				addHat = false;
-			}else if (i === rows && j === cols && addHat){
-				arr.push(hat);
-			}else if(random !== 2 && countSymbols[hat] < Math.floor(rows * cols * 10 / 100)){
+			}else if (random !==2 && countSymbols[hole] < rows * cols * 10 /100 && !((i === 0 && j === 1) || (i === 1 && j === 0))){
 				arr.push(fieldSymbols[random]);
-				countSymbols[fieldSymbols[random]]++
 			}else{
 				arr.push(fieldSymbols[1]);
 			}

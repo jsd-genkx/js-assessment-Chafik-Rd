@@ -142,6 +142,7 @@
 9. แก้ปัญหา ปริ้น warning ให้แจ้งเมื่อ user กรอก way ผิด
 10. เพิ่ม warning message ถ้า user อยู่ขอบ
 11. เพิ่มเงื่อนไข ในการสร้างให้ symbols hole มีแค่ 10% ของขนาด field
+12. เพิ่มเงื่อนไข ในการสร้างให้ symbols hole ห้ามสร้างติดกับจุดเริ่มต้น
 
 _Notes:_<br>
 _- You can attach flowcharts, diagrams, and images as needed._<br>
