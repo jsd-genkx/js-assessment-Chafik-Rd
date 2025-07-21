@@ -131,10 +131,11 @@
 
 ### Thinking Process
 
-1. // step 1
-2. // step 2
-3. // ...
-4. // step n
+1. สร้าง class สำหรับ moveRight, moveLeft, moveUp, moveDown
+2. ทำการเขียน prompt ในการรับ input จาก user
+3. สร้าง class เช็ค input จาก userว่ารับอะไรมาแล้วไปเรียกใช้functionไหน
+4. สร้างตัวแปร เช็คขนาดของ row และ column
+5. สร้าง class ในการ เช็ค game over
 
 _Notes:_<br>
 _- You can attach flowcharts, diagrams, and images as needed._<br>
