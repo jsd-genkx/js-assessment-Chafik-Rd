@@ -133,9 +133,12 @@
 
 1. สร้าง class สำหรับ moveRight, moveLeft, moveUp, moveDown
 2. ทำการเขียน prompt ในการรับ input จาก user
-3. สร้าง class เช็ค input จาก userว่ารับอะไรมาแล้วไปเรียกใช้functionไหน
+3. สร้างเงื่อนไขเช็ค input จาก user ว่ารับอะไรมาแล้วไปเรียกใช้functionไหน
 4. สร้างตัวแปร เช็คขนาดของ row และ column
-5. สร้าง class ในการ เช็ค game over
+5. สร้าง class ในการ เช็ค game over ถ้าเข้าเงื่อไขให้ log และ set game over = true แต่ถ้าไม่เข้าเงื่อนไขแพ้ก็ให้ update field
+6. สร้าง class สำหรับ run โดยจะเรียก class print()เพื่อปริ้น field, prompt, เงื่อนไขเช็ค input และ return game over
+7. เขียน while loop เรียกใช้ class runGame ถ้า game over เป็น false ก็ให้ run ไปเรื่อยๆ
+8. สร้าง function ในการ random field โดยจะทำการ สุ่มขนาด row และ colomn จากนั้น สุ่ม symbols ไปใส่โดย อันแรกตั้งเป็น pathCharacter และ มี hat 1 อัน
 
 _Notes:_<br>
 _- You can attach flowcharts, diagrams, and images as needed._<br>
