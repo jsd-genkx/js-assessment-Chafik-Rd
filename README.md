@@ -139,6 +139,9 @@
 6. สร้าง class สำหรับ run โดยจะเรียก class print()เพื่อปริ้น field, prompt, เงื่อนไขเช็ค input และ return game over
 7. เขียน while loop เรียกใช้ class runGame ถ้า game over เป็น false ก็ให้ run ไปเรื่อยๆ
 8. สร้าง function ในการ random field โดยจะทำการ สุ่มขนาด row และ colomn จากนั้น สุ่ม symbols ไปใส่โดย อันแรกตั้งเป็น pathCharacter และ มี hat 1 อัน
+9. แก้ปัญหา ปริ้น warning ให้แจ้งเมื่อ user กรอก way ผิด
+10. เพิ่ม warning message ถ้า user อยู่ขอบ
+11. เพิ่มเงื่อนไข ในการสร้างให้ symbols hole มีแค่ 10% ของขนาด field
 
 _Notes:_<br>
 _- You can attach flowcharts, diagrams, and images as needed._<br>
